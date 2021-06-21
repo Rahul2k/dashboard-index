@@ -139,9 +139,10 @@ h1 {
 }
 
 #new-dash {
-    border-radius: 5px;
-    height: 50px;
-    width: 150px;
+    border-radius: 7px;
+    border : 2px solid darkblue ;
+    height: 30px;
+    width: 100px;
     position: absolute;
     top: 2px;
     left: 5%;
@@ -179,9 +180,10 @@ h1 {
 
 #widget-add {
 
-    border-radius: 5px;
-    height: 50px;
-    width: 150px;
+    border-radius: 7px;
+    border : 2px solid darkblue;
+    height: 30px;
+    width: 100px;
     position: absolute;
     top: 2px;
     left: 30%;
@@ -255,7 +257,7 @@ h1 {
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 99999;
+    z-index: 999999;
     opacity: 0;
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
@@ -309,7 +311,7 @@ h1 {
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 99999;
+    z-index: 999999;
     opacity: 0;
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;

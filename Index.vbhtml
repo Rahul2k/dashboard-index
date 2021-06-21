@@ -21,67 +21,102 @@ End Code
 
 <!-- Enlarged View | Widget-->
 <div id="openModal1" class="modalDialog1">
-    <div class="text-cenetr">
+    <div class="text-center">
         <a href="#close" title="Close" class="close">X</a>
 
         <div class="content">
-            <ul id="">
-                <li>Task1</li>
-                <li>Task2</li>
-                <li>Task3</li>
-                <li>Task4</li>
-            </ul>
         </div>
 
     </div>
 </div>
 
 
+<!--
+    
+    Second Popup
+
+<div id="openModal2" class="modalDialog">
+    <div class="text-center">
+        <a href="#close" title="Close" class="close">X</a>
+        <div class="">
+            <h4 class="text-center m-t1 ">Please Enter the Following Details</h4>
+            <form id="details" method="post">
+
+                View :
+                <select id="view">
+                    <option value="view1">View1</option>
+                    <option value="view2">View2</option>
+                    <option value="view3">View3</option>
+                </select>
+
+                Column :
+                <select id="col">
+                    <option value="col1">Col1</option>
+                    <option value="col2">Col2</option>
+                    <option value="col3">Col3</option>
+                </select>
+
+                Time :
+                <select id="time">
+                    <option value="week">Col1</option>
+                    <option value="month">Col2</option>
+                    <option value="year">Col3</option>
+                </select>
+
+                <a href="#openModel"><button type="submit">Create</button></a>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+    -->
+
+
 <!-- Pop-Up Box | Widget-->
 
 <div id="openModal" class="modalDialog">
-    <div class="text-cenetr">
+    <div class="text-center">
         <a href="#close" title="Close" class="close">X</a>
         <div class="">
             <h4 class="text-center m-t1 ">Choose a Widget</h4>
             <ul class="p-10 text-center m-t1">
                 <li>
-                    <img src="img/icon.png" width="50px;" style="margin-right: 27px;">Task List &nbsp&nbsp&nbsp
-                    <button class="ml pdb" onclick="addWidget('tasks')">Add</button>
-                </li>
-                <li>
-                    <img src="img/icon.png" width="50px;" style="margin-right: 27px;">Bar Chart&nbsp&nbsp<button class="ml pdb" onclick="addWidget('bar-chart')">
+                    <img src="img/icon.png" width="50px;" style="margin-right: 27px;">Task List &nbsp&nbsp&nbsp<button class="ml pdb" onclick="addWidget('tasks')">
                         Add
                     </button>
                 </li>
                 <li>
-                    <img src="img/icon.png" width="50px;" style="margin-right: 27px;">Pie Chart&nbsp&nbsp <button class="ml pdb" onclick="addWidget('pie-chart')">
+                    <img src="img/icon.png" width="50px;" style="margin-right: 27px;">Bar Chart&nbsp&nbsp<button class="ml pdb" onclick="createChart('bar')">
                         Add
                     </button>
                 </li>
                 <li>
-                    <img src="img/icon.png" width="50px;" style="margin-right: 27px;">Data Grid&nbsp <button class="ml pdb" onclick="addWidget('data-grid')">
+                    <img src="img/icon.png" width="50px;" style="margin-right: 27px;">Pie Chart&nbsp&nbsp <button class="ml pdb" onclick="createChart('pie')">
                         Add
                     </button>
                 </li>
                 <li>
-                    <img src="img/icon.png" width="50px;" style="margin-right: 27px;">System-Chart-1 <button class=" pdb" onclick="addWidget('system-chart-1')">
+                    <img src="img/icon.png" width="50px;" style="margin-right: 27px;">Data Grid&nbsp <button class="ml pdb" onclick="addWidget('data')">
                         Add
                     </button>
                 </li>
                 <li>
-                    <img src="img/icon.png" width="50px;" style="margin-right: 27px;">System-Chart-2 <button class=" pdb" onclick="addWidget('system-chart-2')">
+                    <img src="img/icon.png" width="50px;" style="margin-right: 27px;">System-Chart-1 <button class=" pdb" onclick="createChart('bar')">
                         Add
                     </button>
                 </li>
                 <li>
-                    <img src="img/icon.png" width="50px;" style="margin-right: 27px;">System-Chart-3 <button class=" pdb" onclick="addWidget('system-chart-3')">
+                    <img src="img/icon.png" width="50px;" style="margin-right: 27px;">System-Chart-2 <button class=" pdb" onclick="createChart('bar')">
                         Add
                     </button>
                 </li>
-
+                <li>
+                    <img src="img/icon.png" width="50px;" style="margin-right: 27px;">System-Chart-3 <button class=" pdb" onclick="createChart('bar')">
+                        Add
+                    </button>
+                </li>
             </ul>
-
         </div>
     </div>
 </div>
@@ -109,91 +144,7 @@ End Code
         <div class="box m-t1">
             <div class="sortable">
 
-                <!-- Dashboard Widgets -->
-
-                <div id="tasks" class="widget">
-                    <div class="navBar">
-                        <div class="nev-header"><h3>Task List</h3></div>
-                        <div class="all-icons">
-
-                            <a href="#openModal1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" />
-                                </svg>
-                            </a>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16">
-                                <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
-                            </svg>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" fill="currentColor" class="icons" viewBox="0 0 16 16" onclick="remove('pie-chart')">
-                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class="content">
-                        <ul id="task-list">
-                            <li>Task1</li>
-                            <li>Task2</li>
-                            <li>Task3</li>
-                            <li>Task4</li>
-                            <li>Task5</li>
-                            <li>Task6</li>
-                            <li>Task7</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div id="bar-chart" class="widget">
-                    <div class="navBar">
-                        <div class="nev-header"><h3>Bar Chart</h3></div>
-                        <div class="all-icons">
-                            <a href="#openModal1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" />
-                                </svg>
-                            </a>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16">
-                                <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
-                            </svg>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" fill="currentColor" class="icons" viewBox="0 0 16 16" onclick="remove('pie-chart')">
-                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class="content">
-                        <canvas id="myChart" width="100" height="500"></canvas>
-                    </div>
-                </div>
-
-                <div id="pie-chart" class="widget">
-                    <div class="navBar">
-                        <div class="nev-header"><h3>Pie Chart</h3></div>
-                        <div class="all-icons">
-                            <a href="#openModal1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" />
-                                </svg>
-                            </a>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16">
-                                <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
-                            </svg>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" fill="currentColor" class="icons" viewBox="0 0 16 16" onclick="remove('pie-chart')">
-                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class="content">
-                        <canvas id="myChart2" width="100" height="500"></canvas>
-                    </div>
-                </div>
+                <!-- Dashboard Widgets Here -->
 
             </div>
         </div>
@@ -203,14 +154,41 @@ End Code
 
 <script>
 
-    var widgetCount = 2;
-    var id = 0;
-
     $(document).ready(function () {
 
-        var ctx = document.getElementById('myChart').getContext('2d');
+        $(function () {
+            //Make list sortable:
+            $(".sortable").sortable({}).disableSelection();
+        });
+
+    });
+
+
+    function createChart(chartType) {
+
+        var d = new Date();
+        var id = d.getTime().toString();
+
+        var chartWidget = document.createElement('div');
+        chartWidget.setAttribute("id", id);
+        chartWidget.setAttribute("class", "widget");
+
+        var navbar = document.createElement('div');
+        navbar.setAttribute("class", "navBar");
+
+        // here
+        navbar.innerHTML = '<div class="nev-header"><h3>'+chartType+'</h3></div><div class="all-icons"><a href="#openModal1" onclick="enlarge('+id+')"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16" ><path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" /></svg></a><a href="#openModel"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" /></svg></a><svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" fill="currentColor" class="icons" viewBox="0 0 16 16" onclick="remove('+id+')"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" /></svg></div >';
+
+        var content = document.createElement('div');
+        content.setAttribute("class", "content");
+
+        var canvas = document.createElement('canvas');
+        canvas.setAttribute("id", "mychart" + id);
+        content.appendChild(canvas);
+        
+        var ctx = canvas.getContext('2d');
         var myChart = new Chart(ctx, {
-            type: 'bar',
+            type: chartType,
             data: {
                 labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
                 datasets: [{
@@ -237,10 +215,8 @@ End Code
                 maintainAspectRatio: false,
                 scales: {
                     // barPercentage: 0.1,
-
                     y: {
                         beginAtZero: true,
-
                     },
                     x: {
                         grid: {
@@ -251,70 +227,22 @@ End Code
             }
         });
 
-        var ctx = document.getElementById('myChart2').getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'pie',
-            data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                datasets: [{
-                    label: '#sample 1',
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: '0x292929',
-                    borderWidth: .5,
-                    barPercentage: 1,
-                    barThickness: 20,
-                    maxBarThickness: 20,
-                    minBarLength: 2,
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-            }
-        });
+        chartWidget.appendChild(navbar);
+        chartWidget.appendChild(content);
 
-        $(function () {
-            //Make list sortable:
-            $(".sortable").sortable({}).disableSelection();
-        });
+        $('.sortable').append(chartWidget);
 
-    });
+    }
 
-    function widgetType(widgetName) {
 
-        //  '<div class="navBar"><div class="nev-header"><h3>Pie Chart</h3></div><div class="all-icons"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" /></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" /> </svg><svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" fill="currentColor" class="icons" viewBox="0 0 16 16" onclick="remove('pie-chart')"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" /></svg></div></div>
+    function createWidget(widgetName) {
 
-        if (widgetName == 'bar-chart') {
-            id++;
-            return '<div id="bar-chart" class="widget"><div class="navBar"><div class="nev-header"><h3>Bar Chart</h3></div><div class="all-icons"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" /></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" /> </svg><svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" fill="currentColor" class="icons" viewBox="0 0 16 16" onclick="remove(\'bar-chart\')"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" /></svg></div></div><div class="content"><canvas id="myChart"+id width="100" height="500"></canvas></div></div>';
-        }
+        var d = new Date();
+        var id = d.getTime().toString();
 
-        else if (widgetName == 'tasks') {
-            return '<div id="tasks" class="widget"><div class="navBar"><div class="nev-header"><h3>Task List</h3></div><div class="all-icons"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" /></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" /> </svg><svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" fill="currentColor" class="icons" viewBox="0 0 16 16" onclick="remove(\'tasks\')"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" /></svg></div></div><div class="content"><ul id="task-list"><li>Task1</li><li>Task2</li><li>Task3</li><li>Task4</li><li>Task5</li><li>Task6</li><li>Task7</li></ul></div></div></div>';
-        }
-
-        else if (widgetName == 'pie-chart') {
-            return '<div id = "pie-chart" class="widget"><div class="navBar"><div class="nev-header"><h3>Pie Chart</h3></div><div class="all-icons"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" /></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" /> </svg><svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" fill="currentColor" class="icons" viewBox="0 0 16 16" onclick="remove(\'pie-chart\')"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" /></svg></div></div><div class="content"></div></div></div>';
-        }
-
-        else if (widgetName == 'system-chart-1') {
-            return '<div id = "system-chart-1" class= "widget" ><div class="navBar"><div class="nev-header"><h3>System Chart 1</h3></div><div class="all-icons"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" /></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" /> </svg><svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" fill="currentColor" class="icons" viewBox="0 0 16 16" onclick="remove(\'system-chart-1\')"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" /></svg></div></div><div class="content"></div></div>';
-        }
-
-        else if (widgetName == 'system-chart-2') {
-            return '<div id = "system-chart-2" class= "widget" ><div class="navBar"><div class="nev-header"><h3>System Chart 2</h3></div><div class="all-icons"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" /></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" /> </svg><svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" fill="currentColor" class="icons" viewBox="0 0 16 16" onclick="remove(\'system-chart-2\')"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" /></svg></div></div><div class="content"></div></div>';
-        }
-
-        else if (widgetName == 'system-chart-3') {
-            return '<div id = "system-chart-3" class= "widget" ><div class="navBar"><div class="nev-header"><h3>System Chart 3</h3></div><div class="all-icons"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" /></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" /> </svg><svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" fill="currentColor" class="icons" viewBox="0 0 16 16" onclick="remove(\'system-chart-3\')"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" /></svg></div></div><div class="content"></div></div>';
+        // here
+        if (widgetName == 'tasks') {
+            return '<div id=' + id + ' class="widget"><div class="navBar"><div class="nev-header"><h3>Task List</h3></div><div class="all-icons"><a href="#openModal1" onclick="enlarge(' + id + ')"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" /></svg></a><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" /> </svg><svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" fill="currentColor" class="icons" viewBox="0 0 16 16" onclick="remove(\'tasks\')"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" /></svg></div></div><div class="content"><ul id="task-list"><li>Task1</li><li>Task2</li><li>Task3</li><li>Task4</li><li>Task5</li><li>Task6</li><li>Task7</li></ul></div></div></div>';
         }
 
         else if (widgetName == 'data-grid') {
@@ -322,15 +250,31 @@ End Code
         }
     }
 
+    function enlarge(id) {
+
+        document.getElementById('openModal1').children[0].children[1].innerHTML = document.getElementById(id).children[1].innerHTML;
+        document.getElementById('openModal1').children[0].children[1].setAttribute("id", )
+        //document.getElementById('openModal1').children[0].children[1].setAttribute("style", "z-index : 10000000");
+        // = document.getElementById(id).children[1].innerHTML
+    }
+
     function addWidget(widgetName) {
 
-        var widget = widgetType(widgetName);
+        //console.log(document.getElementById('details').innerHTML);
+        //widgetType = widgetName;
+        //console.log(widgetName);
+        console.log(widgetName);
+
+        //$('#details').on(onsubmit, event => {
+        //    console.log(event);
+        //});
+
+        var widget = createWidget(widgetName);
         $('.sortable').append(widget);
     }
 
     function remove(id) {
         console.log(id);
-        widgetCount -= 1;
         $("#" + id).remove();
     }
 
