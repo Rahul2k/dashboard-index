@@ -11,7 +11,7 @@
 .box {
     margin-top: 120px;
     margin-left: 20px;
-    overflow-y : hidden;
+    overflow-y: hidden;
 }
 
 ul {
@@ -27,13 +27,13 @@ hr {
 
 .dashbar {
     display: flex;
-    height: 60px;
+    height: 45px;
     width: 100%;
-    background-color: #bdbdbd;
+    background-color: #D8D8D8;
     position: fixed;
     z-index: 9999;
     margin-left: -15px;
-    margin-top: -20px;
+    margin-top: -2.6%;
 }
 
 .sortable div .navBar {
@@ -48,7 +48,9 @@ hr {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    background-color: #d8d8d8;
+    background-color: #D8D8D8;
+    border-top-right-radius: 17px;
+    border-top-left-radius: 17px;
 }
 
 .sortable {
@@ -57,7 +59,7 @@ hr {
     margin: 20px auto;
     padding: 5px 10px;
     list-style-type: none;
-    text-align: center;
+    text-align: left;
     overflow-y: hidden;
     transition: ease .2s;
 }
@@ -69,7 +71,6 @@ hr {
         height: 300px;
         margin: 10px;
         padding: 5px;
-
         background: #ffffff;
         box-shadow: 0 5px 10px rgba(0,0,0,0.1), 0 3px 3px rgba(0,0,0,0.12);
     }
@@ -95,11 +96,16 @@ h1 {
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     color: #78909C;
+    border-bottom: 2px solid #292929;
+    border-bottom-left-radius: 17px;
+    border-bottom-right-radius: 17px;
+    border-left: 2px solid #292929;
+    border-right: 2px solid #292929;
 }
 
-.sortable div .content:hover {
-    background: #F5F5F5;
-}
+    .sortable div .content:hover {
+        background: #F5F5F5;
+    }
 
 .sortable div h2 {
     font-size: 60px;
@@ -116,9 +122,9 @@ h1 {
     color: #78909C;
 }
 
-.sortable div h2:hover {
-    background: #F5F5F5;
-}
+    .sortable div h2:hover {
+        background: #F5F5F5;
+    }
 
 .sortable div .content #data-grid {
     font-size: 20px;
@@ -140,7 +146,7 @@ h1 {
 
 #new-dash {
     border-radius: 7px;
-    border : 2px solid darkblue ;
+    border: 2px solid darkblue;
     height: 30px;
     width: 100px;
     position: absolute;
@@ -152,13 +158,14 @@ h1 {
 
 .dashboards {
     border-radius: 3px;
-    height: 50px;
+    height: 30px;
     width: 150px;
     position: absolute;
-    top: 2px;
+    top: 3px;
     left: 17%;
     margin: 3px;
     color: #78909C;
+    border: 2px solid #22415C;
 }
 
 #task-list {
@@ -175,18 +182,16 @@ h1 {
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     color: #78909C;
-    overflow-y: scroll;
 }
 
 #widget-add {
-
     border-radius: 7px;
-    border : 2px solid darkblue;
+    border: 2px solid #22415C;
     height: 30px;
     width: 100px;
     position: absolute;
-    top: 2px;
-    left: 30%;
+    top: 3px;
+    left: 28%;
     margin: 3px;
     color: #78909C;
 }
@@ -218,38 +223,13 @@ h1 {
     .modalDialog > div {
         width: 400px;
         position: relative;
-        margin: 10% auto;
+        margin: 5% auto;
         padding: 5px 20px 13px 20px;
         border-radius: 10px;
         background: #fff;
         background: #339999;
     }
 
-.close {
-    background: #606061;
-    color: #FFFFFF;
-    line-height: 25px;
-    position: absolute;
-    right: -12px;
-    text-align: center;
-    top: -10px;
-    width: 24px;
-    text-decoration: none;
-    font-weight: bold;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
-    -moz-box-shadow: 1px 1px 3px #000;
-    -webkit-box-shadow: 1px 1px 3px #000;
-    box-shadow: 1px 1px 3px #000;
-}
-
-    .close:hover {
-        background: #00d9ff;
-    }
-
-
-/* Popup box BEGIN */
 
 .modalDialog {
     position: fixed;
@@ -263,46 +243,26 @@ h1 {
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
     pointer-events: none;
-    background: rgba(0,0,0,0.6);
+    
 }
 
-    .modalDialog:target {
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    .modalDialog > div {
-        width: 500px;
-        position: relative;
-        margin: 10% auto;
-        padding: 5px 20px 13px 20px;
-        border-radius: 10px;
-        background: #fff;
-        background: #fff;
-    }
-
-.close {
-    background: #606061;
-    color: #FFFFFF;
-    line-height: 25px;
-    position: absolute;
-    right: -12px;
-    text-align: center;
-    top: -10px;
-    width: 24px;
-    text-decoration: none;
-    font-weight: bold;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
-    -moz-box-shadow: 1px 1px 3px #000;
-    -webkit-box-shadow: 1px 1px 3px #000;
-    box-shadow: 1px 1px 3px #000;
+.modalDialog:target {
+    opacity: 1;
+    pointer-events: auto;
 }
 
-    .close:hover {
-        background: #00d9ff;
-    }
+.modalDialog > div {
+    width: 500px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: #fff;
+}
+
+
+    
 
 
 .modalDialog1 {
@@ -337,33 +297,24 @@ h1 {
     }
 
 .close {
-    background: #606061;
-    color: #FFFFFF;
+
+    padding: 5px;
+    color: #000;
     line-height: 25px;
     position: absolute;
-    right: 2px;
-    text-align: center;
-    top: 1px;
+    right: -31px;
+    right: 19px;
+    : center;
+    top: 12px;
     width: 24px;
     text-decoration: none;
-    font-weight: bold;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
-    -moz-box-shadow: 1px 1px 3px #000;
-    -webkit-box-shadow: 1px 1px 3px #000;
-    box-shadow: 1px 1px 3px #000;
 }
-
-    .close:hover {
-        background: #00d9ff;
-    }
+   
 
 .pd {
     padding: 20px;
 }
 
-/* Popup box BEGIN */
 
 .p-10 li {
     padding: 2px;
@@ -377,6 +328,9 @@ h1 {
 
 .m-t1 {
     margin-top: 50px;
+}
+.m-t10 {
+    margin-top: 10px;
 }
 
 .pdb {
@@ -398,19 +352,58 @@ h1 {
     width: 442px;
     height: 46px;
     top: -15px;
-    left: -54px;
-    background-color: #bdbdbd;
+    left: -15px;
+    background-color: #D8D8D8;
+    border-top: 2px solid #292929;
+    border-left: 2px solid #292929;
+    border-top-left-radius: 17px;
 }
 
 .sortable div .navBar .all-icons {
     width: 108px;
     height: 46px;
     top: -81px;
-    right: -221px;
-    background-color: #bdbdbd;
+    right: -427px;
+    background-color: #D8D8D8;
+    border-top: 2px solid #292929;
+    border-right: 2px solid #292929;
+    border-top-right-radius: 17px;
 }
 
 .sortable div h3 {
     margin-top: 7px;
-    margin-left: -330px;
-}	
+    margin-left: 10px;
+}
+
+
+
+.modalDialog2 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    
+}
+
+    .modalDialog2:target {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .modalDialog2 > div {
+        width: 70%;
+        height: 70%;
+        position: relative;
+        margin: 10% auto;
+        padding: 5px 20px 13px 20px;
+        color: #78909C;
+        overflow-y: scroll;
+        background: #fff;
+    }
