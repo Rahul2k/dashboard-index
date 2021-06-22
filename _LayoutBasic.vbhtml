@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,14 +11,15 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic,300" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 
-    @*<link href="@Url.Content("~/Content/themes/TAB/css/custom.css")" rel="stylesheet" />*@
     @Styles.Render("~/Styles/Dashboard")
     @Scripts.Render("~/bundles/Dashboard")
     @Scripts.Render("~/bundles/modernizr")
 
 
+    @Styles.Render("~/Styles/MVCLayoutCSS")
+    <script src="~/Content/themes/TAB/js/es6-promise.auto.min.js"></script>
+    @Scripts.Render("~/bundles/MVCLayoutJS")
 
     <script type="text/javascript">
         $(document).ready(function () {
@@ -113,24 +114,6 @@
     </script>
 
     <style type="text/css">
-        .sidebar-toggle {
-            position: absolute;
-            z-index: 11;
-            right: -15px;
-            height: 100%;
-            background: #404040;
-            width: 15px;
-        }
-
-        #left-panel-arrow {
-            vertical-align: middle;
-            color: #ffffff;
-            position: relative;
-            top: 40%;
-            bottom: 60%;
-            padding-left: 4px;
-            font-size: 15px;
-        }
 
         .modal-header .close {
             font-size: 29px !important;
@@ -146,49 +129,112 @@
 <body>
     <input type="hidden" id="hdnHomeVal" value="@Languages.Translation("mnuAdminHome")" />
     <input id="hdnRefInfo" type="hidden" />
-    <div class="wrapper">
-        <header class="main-header" style="z-index:999;">
-            <nav class="navbar navbar-default navbar-fixed-top tab-nave" role="navigation">
-                <div class="container-fluid">
-                    <a id="aLogo" class="logo navbar-brand" href="~/Data"><img src="@Url.Content("~/Images/logo.png")" class="img-responsive" /></a>
-                    <div class="navbar-custom-menu pull-left" id="importSetup"></div>
-                    <div class="navbar-custom-menu pull-left scanmenu"></div>
-                    <span style="visibility:hidden" id="lblLoginUserName">@TabFusionRMS.WebVB.Keys.CurrentUserName</span>
-                    <div class="collapse navbar-collapse navbar-right tab-menu" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            <li>
-                                <a id="hlHome" href="~/Data">@Languages.Translation("Home")</a>
-                            </li>
-                            <li>
-                                <a id="hlHelp" href="~/help/Default.htm" target="Help">@Languages.Translation("Help")</a>
-                            </li>
-                            <li>
-                                <a id="hlAboutUs">@Languages.Translation("About")</a>
-                            </li>
-                            <li>
-                                <a id="hlSignout" href="/logout.aspx">@Languages.Translation("SignOut")</a>
-                            </li>
-                        </ul>
-                    </div>
+
+
+    <div style="position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; min-height: 500px;">
+        <nav class="navbar navbar-default navbar-fixed-top tab-nave" role="navigation">
+            <div class="container-fluid">
+                <a id="aLogo" class="logo navbar-brand" href="~/Data"><img src="@Url.Content("~/Images/logo.png")" class="img-responsive" /></a>
+                <div class="navbar-custom-menu pull-left" id="importSetup"></div>
+                <div class="navbar-custom-menu pull-left scanmenu"></div>
+                <span style="visibility:hidden" id="lblLoginUserName">@TabFusionRMS.WebVB.Keys.CurrentUserName</span>
+                <div class="collapse navbar-collapse navbar-right tab-menu" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a id="hlHome" href="~/Data">@Languages.Translation("Home")</a>
+                        </li>
+                        <li>
+                            <a id="hlHelp" href="~/help/Default.htm" target="Help">@Languages.Translation("Help")</a>
+                        </li>
+                        <li>
+                            <a id="hlAboutUs">@Languages.Translation("About")</a>
+                        </li>
+                        <li>
+                            <a id="hlSignout" href="/logout.aspx">@Languages.Translation("SignOut")</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
+        <!--Search-->
+        <div id="wrapper" style="margin-top:0%; padding-top: 50px">
+            <!-- left panel start -->
+            <div class="sidebar-wrapper" id="divSearch">
+                <div id="divMenu" class="divMenu">
 
+                </div>
 
-       
-        <div class="container-fluid">
-            @RenderBody()
+                <a href="#menu-toggle" class="toggle_btn" id="menu-toggle"><i class="fa fa-caret-left" id="left-panel-arrow"></i></a>
+
+            </div>
+            <div id="page-content-wrapper">
+                @RenderBody()
+            </div>
         </div>
-       
+
+        <!--spinningwheel-->
+        <div id="spinningWheel" style="display:none" class="loaderMain-wrapper">
+            <div class="loaderMain"></div>
+        </div>
+        <div id="spingrid" style="display:none;" class="loaderMain-wrapper">
+            <i class="fa fa-refresh fa-spin" style="display:inline-flex;position:relative;margin-left:50%;margin-top:17%;font-size:20px"></i>
+        </div>
+
+        <div class="form-horizontal" id="divAboutInfo">
+
+        </div>
+        <div id="toast-container" class="toast-top-center" style="display: none;">
+            <div class="toast toast-success">
+                <div class="toast-title"></div>
+                <div class="toast-message"></div>
+            </div>
+        </div>
     </div>
-    <div class="form-horizontal" id="divAboutInfo">
-    </div>
+
+
+
     @RenderSection("scripts", required:=False)
 
     <script>
         $(document).bind("mousemove keypress", 'body', function (e) {
             time = new Date().getTime();
         });
+    </script>
+    <script>
+        $(document).ready(function () {
+            //open and close side menu
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+                var vrToggleIcon = $(this).find('i');
+                if (vrToggleIcon.hasClass('fa-caret-left')) {
+                    vrToggleIcon.removeClass('fa-caret-left').addClass('fa-caret-right');
+                }
+                else {
+                    vrToggleIcon.removeClass('fa-caret-right').addClass('fa-caret-left');
+                    $('#divmenuloader').hide();
+                }
+            });
+
+        });
+
+        (function ($) {
+            $.fn.fnAlertMessage = function (options) {
+                var settings = $.extend({
+                    title: "Success",
+                    message: "Message",
+                    timeout: 3000,
+                    msgTypeClass: 'toast-success'//toast-warning
+                }, options);
+                return this.each(function () {
+                    $('#' + this.id).fadeIn(settings.timeout / 2).fadeOut(settings.timeout * 3);
+                    $('#' + this.id).find('.toast-title').html(settings.title);
+                    $('#' + this.id).find('.toast-message').html(settings.message);
+                    $('#toast-container').find('.toast').removeClass('toast-success').addClass(settings.msgTypeClass);
+                });
+            };
+        }(jQuery));
+
     </script>
 </body>
 </html>

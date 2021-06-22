@@ -9,44 +9,45 @@ End Code
 <link rel="stylesheet" href="~/Content/themes/TAB/css/images/p1.png" />
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
-<!--
-<script src="~/Content/themes/TAB/js/jquery-3.4.1.min.js"></script>
-<script src="~/Content/themes/TAB/js/jquery-uimin.js"></script>
--->
+<style>
+    #modalAddNewDashboard .modal-dialog {
+        width: 441px !important;
+    }
 
-<meta name="viewport" content="width=device-width" />
-<title>Dashboard</title>
-<br />
-<br />
+    #modalAddNewDashboard {
+        z-index: 99999;
+    }
+</style>
 
-<div id="openModal2" class="modalDialog1">
-    <div class="text-cenetr">
-        <a href="#close" title="Close" class="close">X</a>
-
-        <div class="content ">
-            <ul id="">
-                <li>Task1</li>
-                <li>Task2</li>
-                <li>Task3</li>
-                <li>Task4</li>
-                <li>Task5</li>
-                <li>Task6</li>
-                <li>Task7</li>
-                <li>Task1</li>
-                <li>Task2</li>
-                <li>Task3</li>
-                <li>Task4</li>
-                <li>Task5</li>
-
-
-            </ul>
+<!-- Add Dashboard Name -->
+<!-- Add Dashboard Name -->
+<div class="modal fade" id="modalAddNewDashboard" tabindex="-1" role="dialog" aria-labelledby="myModalmodalAddNewDashboard">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="btnClose" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalmodalAddNewDashboard">Add New Dashboard</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group row">
+                    <label class="col-sm-4 control-label" for="txtNewDashboardName">Name: </label>
+                    <div class="col-sm-8">
+                        <input id="txtNewDashboardName" type="text" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="btnSaveName" type="button" class="btn btn-primary">@Languages.Translation("Ok")</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" aria-hidden="true">@Languages.Translation("Cancel")</button>
+            </div>
         </div>
-
+        <!-- /.modal-content -->
     </div>
+    <!-- /.modal-dialog -->
 </div>
+
+
 <!-- Enlarged View | Widget-->
 <div id="openModal1" class="modalDialog1">
     <div class="text-center">
@@ -58,6 +59,7 @@ End Code
 
     </div>
 </div>
+
 
 <div id="openModal" class="modalDialog">
 
@@ -74,16 +76,7 @@ End Code
             </div>
             <script type="text/javascript">
                 $(document).ready(function () {
-                    //$(document).keypress(function (event) {
-                    //    if (event.keyCode == 13) {
-                    //        //debugger;
-                    //        console.log("inside keypress of query control.ascx...")
-                    //        event.preventDefault();
-                    //        $("#Dialog_Query_DialogQuery_btnQueryClose").click();
-                    //        return false;
-                    //    }
-                    //    return undefined;
-                    //});
+
                     $('[data-toggle="tooltip"]').tooltip();
                     fn_cancelQueryWindow();
                     fn_FloatingButtons_QueryWindow();
@@ -113,23 +106,22 @@ End Code
                 }
 
                 #Dialog_Query_DialogQuery_tblQuery tbody td {
+
                     word-break: keep-all;
-                    .img1
+                    .img1 {
+                        left: 24%;
+                        position: relative;
+                    }
 
-                {
-                    left: 24%;
-                    position: relative;
-                }
+                    .img2 {
+                        left: 20%;
+                        position: relative;
+                    }
 
-                .img2 {
-                    left: 20%;
-                    position: relative;
-                }
-
-                .img3 {
-                    right: 24%;
-                    position: relative;
-                }
+                    .img3 {
+                        right: 24%;
+                        position: relative;
+                    }
                 }
             </style>
             <input name="ctl00$Dialog_Query$DialogQuery$hdnEnd" type="hidden" id="Dialog_Query_DialogQuery_hdnEnd" value="End">
@@ -145,12 +137,12 @@ End Code
                             <div class="">
 
                                 <ul class="p-10 text-center m-t10">
-                                    <li><img src="~/Content/themes/TAB/css/images/icon.png" width="40px;" style="right:24%; position:relative;">Task Lis &nbsp&nbsp&nbsp<a href="#" onclick="addWidget('tasks')"><img src="~/Content/themes/TAB/css/images/pl.png"style="left:24%; position:relative;" width="30px;"></a></li>
+                                    <li><img src="~/Content/themes/TAB/css/images/icon.png" width="40px;" style="right:24%; position:relative;">Task List &nbsp&nbsp&nbsp<a href="#" onclick="addWidget('tasks')"><img src="~/Content/themes/TAB/css/images/pl.png" style="left:24%; position:relative;" width="30px;"></a></li>
                                     <li><img src="~/Content/themes/TAB/css/images/icon.png" width="40px;" style="right:24%; position:relative;">Bar Chart&nbsp&nbsp<a href="#" onclick="addWidget('bar')"><img src="~/Content/themes/TAB/css/images/pl.png" style="left:24%; position:relative;" width="30px;"></a></li>
                                     <li><img src="~/Content/themes/TAB/css/images/icon.png" width="40px;" style="right:24%; position:relative;">Pie Chart&nbsp&nbsp<a href="#" onclick="addWidget('pie')"><img src="~/Content/themes/TAB/css/images/pl.png" style="left:24%; position:relative;" width="30px;"></a></li>
                                     <li><img src="~/Content/themes/TAB/css/images/icon.png" width="40px;" style="right:24%; position:relative;">Data Grid&nbsp <a href="#" onclick="addWidget('data')"><img src="~/Content/themes/TAB/css/images/pl.png" style="left:24%; position:relative;" width="30px;"></a></li>
                                     <li><img src="~/Content/themes/TAB/css/images/icon.png" width="40px;" style="right:20%; position:relative;">System-Chart-1 <a href="#" onclick="addWidget('bar')"><img src="~/Content/themes/TAB/css/images/pl.png" style="left:20%; position:relative;" width="30px;"></a></li>
-                                    <li><img src="~/Content/themes/TAB/css/images/icon.png" width="40px;" style="right:20%; position:relative;">System-Chart-2 <a href="#" onclick="addWidget('bar')"><img src="~/Content/themes/TAB/css/images/pl.png"style="left:20%; position:relative;" width="30px;"></a></li>
+                                    <li><img src="~/Content/themes/TAB/css/images/icon.png" width="40px;" style="right:20%; position:relative;">System-Chart-2 <a href="#" onclick="addWidget('bar')"><img src="~/Content/themes/TAB/css/images/pl.png" style="left:20%; position:relative;" width="30px;"></a></li>
                                     <li><img src="~/Content/themes/TAB/css/images/icon.png" width="40px;" style="right:20%; position:relative;">System-Chart-3 <a href="#" onclick="addWidget('bar')"><img src="~/Content/themes/TAB/css/images/pl.png" style="left:20%; position:relative;" width="30px;"></a></li>
 
                                 </ul>
@@ -168,56 +160,17 @@ End Code
     </div>
 </div>
 
-<!--
-<div id="openModal2" class="modalDialog">
-    <div class="text-center">
-        <a href="#close" title="Close" class="close">X</a>
-        <div class="">
-            <h4 class="text-center m-t1 ">Please Enter the Following Details</h4>
-            <form id="details" method="post">
 
-                View :
-                <select id="view">
-                    <option value="view1">View1</option>
-                    <option value="view2">View2</option>
-                    <option value="view3">View3</option>
-                </select>
-
-                Column :
-                <select id="col">
-                    <option value="col1">Col1</option>
-                    <option value="col2">Col2</option>
-                    <option value="col3">Col3</option>
-                </select>
-
-                Time :
-                <select id="time">
-                    <option value="week">Col1</option>
-                    <option value="month">Col2</option>
-                    <option value="year">Col3</option>
-                </select>
-
-                <a href="#openModel"><button type="submit">Create</button></a>
-            </form>
-
-        </div>
-    </div>
-</div>
-
-    -->
-<!-- Pop-Up Box | Widget-->
-
--->
 <!-- Dashboard -->
 
-<div class="content-wrapper" style="margin-left: 0px; margin-top: 50px;">
+<div class="content-wrapper" style="margin-left: 0px; margin-top: 20px;">
     <div style="position:relative;">
 
         <!-- Dashboard NavBar-->
 
         <div class="dashbar">
 
-            <button type="button" class="new-dash" value="new-dash" style="height: 30px; margin: 6px; margin-left: 195px; border-color: #22415C; color: #292929; border-radius: 7px;">New</button>
+            <button type="button" class="new-dash" value="new-dash" style="height: 30px; margin: 6px; margin-left: 15px; border-color: #22415C; color: #292929; border-radius: 7px;" data-toggle="modal" data-target="#modalAddNewDashboard">New</button>
             <select class="dashboards">
                 <option>Dash 1</option>
                 <option>Dash 2</option>
@@ -320,27 +273,22 @@ End Code
     }
 
 
- /*   function create(chartName) {
+    function createWidget(widgetName) {
 
-        var d = new Date();
-        var id = d.getTime().toString();
+        var id = new Date().getTime().toString();
 
         // here
         if (widgetName == 'tasks') {
-            return '<div id=' + id + ' class="widget"><div class="navBar"><div class="nev-header"><h3>Task List</h3></div><div class="all-icons"><a href="#openModal1" onclick="enlarge(' + id + ')"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" /></svg></a><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" /> </svg><svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" fill="currentColor" class="icons" viewBox="0 0 16 16" onclick="remove(\'tasks\')"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" /></svg></div></div><div class="content"><ul id="task-list"><li>Task1</li><li>Task2</li><li>Task3</li><li>Task4</li><li>Task5</li><li>Task6</li><li>Task7</li></ul></div></div></div>';
+            return '<div id=' + id + ' class="widget"><div class="navBar"><div class="nev-header"><h3>Task List</h3></div><div class="all-icons"><a href="#openModal1" onclick="enlarge(' + id + ')"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" /></svg></a><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" /> </svg><svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" fill="currentColor" class="icons" viewBox="0 0 16 16" onclick="remove(' + id + ')"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" /></svg></div></div><div class="content"><ul id="task-list"><li>Task1</li><li>Task2</li><li>Task3</li><li>Task4</li><li>Task5</li><li>Task6</li><li>Task7</li></ul></div></div></div>';
         }
 
-        else if (widgetName == 'data-grid') {
-            return '<div id = "data-grid" class= "widget" ><div class="navBar"><div class="nev-header"><h3>Data Grid</h3></div><div class="all-icons"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" /></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" /> </svg><svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" fill="currentColor" class="icons" viewBox="0 0 16 16" onclick="remove(\'data-grid\')"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" /></svg></div></div><div class="content"></div></div>';
+        else if (widgetName == 'data') {
+            return '<div id = "data" class= "widget" ><div class="navBar"><div class="nev-header"><h3>Data Grid</h3></div><div class="all-icons"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" /></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" /> </svg><svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" fill="currentColor" class="icons" viewBox="0 0 16 16" onclick="remove(\'data-grid\')"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" /></svg></div></div><div class="content"></div></div>';
         }
-    } */
+    }
 
     function enlarge(id, widgetType) {
 
-        //var id = Date().getTime.toString() ;
-        //var canvas = createChart()
-
-        //document.getElementById('openModal1').children[0].children[1].innerHTML = document.getElementById(id).children[1].innerHTML;
         id = new Date().getTime().toString();
         var canvas = document.createElement('canvas');
         canvas.setAttribute("id", "mychart" + id);
@@ -391,10 +339,6 @@ End Code
         });
 
         document.getElementById('openModal1').children[0].children[1].append(canvas);
-
-        //document.getElementById('openModal1').children[0].children[1].setAttribute("id",)
-        //document.getElementById('openModal1').children[0].children[1].setAttribute("style", "z-index : 10000000");
-        // = document.getElementById(id).children[1].innerHTML
     }
 
     function clean() {
@@ -403,15 +347,14 @@ End Code
 
     function addWidget(widgetName) {
 
-        //console.log(document.getElementById('details').innerHTML);
-        //widgetType = widgetName;
-        //console.log(widgetName);
-
         var widget;
-        if (widgetName == 'tasks') {
-            widget = '<div id=' + id + ' class="widget"><div class="navBar"><div class="nev-header"><h3>Task List</h3></div><div class="all-icons"><a href="#openModal1" onclick="enlarge(' + id + ')"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" /></svg></a><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icons" viewBox="0 0 16 16"><path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" /> </svg><svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" fill="currentColor" class="icons" viewBox="0 0 16 16" onclick="remove(\'tasks\')"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" /></svg></div></div><div class="content"><ul id="task-list"><li>Task1</li><li>Task2</li><li>Task3</li><li>Task4</li><li>Task5</li><li>Task6</li><li>Task7</li></ul></div></div></div>';
+
+        if (widgetName == 'tasks' || widgetName == 'data') {
+            widget = createWidget(widgetName);
         }
-        else widget = createChart(widgetName);
+        else {
+            widget = createChart(widgetName);
+        }
 
         $('.sortable').append(widget);
     }
@@ -421,4 +364,16 @@ End Code
         $("#" + id).remove();
     }
 
+    $("#btnSaveName").click(() => {
+        var Name = $("#txtNewDashboardName").val();
+        if (Name == '') {
+            return false;
+        }
+        $("#selectDashboardList").append("<option>" + Name + "</option>")
+        $("#modalAddNewDashboard").modal("hide");
+        $('#selectDashboardList').trigger("chosen:updated");
+        $('#toast-container').fnAlertMessage({ title: '', msgTypeClass: 'toast-success', message: 'Added Successfully' });
+        setTimeout(() => { window.location.reload(); }, 500);
+    })
 </script>
+

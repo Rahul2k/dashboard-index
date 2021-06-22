@@ -32,7 +32,7 @@ hr {
     background-color: #D8D8D8;
     position: fixed;
     z-index: 9999;
-    margin-left: -15px;
+    margin-left: -0.45%;
     margin-top: -2.6%;
 }
 
@@ -162,7 +162,7 @@ h1 {
     width: 150px;
     position: absolute;
     top: 3px;
-    left: 17%;
+    left: 5%;
     margin: 3px;
     color: #78909C;
     border: 2px solid #22415C;
@@ -191,7 +191,7 @@ h1 {
     width: 100px;
     position: absolute;
     top: 3px;
-    left: 28%;
+    left: 16%;
     margin: 3px;
     color: #78909C;
 }
