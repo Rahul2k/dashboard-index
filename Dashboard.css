@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
 :root {
     background: white;
 }
@@ -360,6 +365,7 @@ h1 {
 }
 
 .sortable div .navBar .all-icons {
+    padding-left: 34px;
     width: 108px;
     height: 46px;
     top: -81px;
