@@ -79,6 +79,12 @@ hr {
     margin: 15px 0;
 }
 
+.widget {
+    overflow: auto;
+
+    border: 1px solid grey;
+}
+
 .dashbar {
     display: flex;
     height: 45px;
@@ -119,15 +125,24 @@ hr {
     transition: ease .2s;
 }
 
-    .sortable div {
+.widget {
+    display: inline-block;
+    position: relative;
+    width: 550px;
+    margin: 10px;
+    padding: 5px;
+    background: #ffffff;
+}
+
+/*    .sortable div {
         display: inline-block;
         position: relative;
         width: 550px;
-        height: 300px;
         margin: 10px;
         padding: 5px;
         background: #ffffff;
-    }
+    }*/
+
 
 
 
