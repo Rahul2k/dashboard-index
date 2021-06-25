@@ -1,0 +1,38 @@
+﻿.icons{font-family: 'Wingdings 2';background-color: white;color: black;text-decoration: none;font-size: 11pt;padding-right: 2px;
+       padding-left: 2px;text-align: center;margin: 0px;}
+a{color: #000000;}
+a:hover{text-decoration: underline;}
+.gridButton{/* border: 2px ridge silver;background-color: #C0C0C0;margin-right: 6px;margin-top: 2px;padding: 2px 4px 2px 4px;*/ }
+.datacell{text-align: left;font-family: Arial;margin: 0px;margin-right: 0px;margin-left: 2px;cursor: pointer;vertical-align: top; width:182px;/* border: 1px solid #CCCCCC; */ }
+.tableHeader{font-weight: 700;}
+/*.row{border-bottom: solid 1px silver;}*/
+/*.row:hover{}*/
+.colhead{color: black;font-weight: 700; text-decoration: underline; padding-right: 2px;padding-left: 4px;text-align: left;}
+.colheadicon{background-color: white;color: black;padding-right: 2px;padding-left: 2px;text-align: center;width: 20px;}
+.searchbar{color: White;}
+.toolbar{font-size: 10pt;font-weight: 400;border: solid 0px #bdbdbd;}
+.toolbarcells{width: 57px;text-align: center;background-color: white;cursor: pointer;color: blue;font-family: Arial;font-size: 10pt;font-weight: 300;}
+.toolbarcell:hover{border: solid 1px black;}
+.titlecell{border-collapse: collapse; color: White;height: 30px; padding-left: 0px;font-size: 11pt;font-weight: 700;background-color: white; background-repeat: repeat-x;}
+.label{color: black;font-family: Arial Narrow;font-size: 10pt;font-weight: 500;text-align: right;vertical-align: top;}
+.labelDisabled{color: Gray;    font-family: Arial Narrow;font-size: 10pt;font-weight: 500;text-align: right;vertical-align: top;}
+.drilldown{border: solid 1px black; padding: 2px;margin: 2px; }
+table.center {margin-left:auto; margin-right:auto;}
+#crumbs{color: #0000FF;padding-top: 8px;padding-bottom: 8px;font-size: 10pt;}
+.crumb{vertical-align:  text-top; }
+.staticselectedworkgroupmenu{background-image: url(images/WA-tab-2.png);}
+.requestTextBox{width:250px;}
+.infoLink{cursor: pointer; color: #339966;}
+.ft_container { overflow: hidden; padding: 2px; }
+.ft_rel_container { position: relative; overflow: hidden; border-width: 0px;}
+.ft_r, .ft_rc { background-image: none; }
+.ft_rc { position: absolute; z-index: 1005; }
+.ft_r, .ft_c { position: relative; }
+.ft_rwrapper, .ft_cwrapper { overflow: hidden; position: absolute; z-index: 1001; border-width: 0px;  padding: 0px; margin: 0px; }
+.ft_scroller { width: 100%; overflow: auto; height: 100%; padding: 0px; margin: 0px;}
+.ft_container tbody tr.ui-widget-content, thead.ui-widget-header { background-image: none; }
+.alignCB label{  position: relative;  top: -2px;  }  
+.menuLoad{display:none;}
+.menuLoadShow{display:none;}
+.hypermenu {margin-left: 10px;}
+.table {width:99% !important;}

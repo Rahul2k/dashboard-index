@@ -1,0 +1,74 @@
+
+/*layout*/
+
+
+/*drilldown styles*/
+
+.l_drillDownWrapper {
+  overflow: hidden;
+  position: relative;
+  background: none repeat scroll 0 0 #FFF;
+  border-bottom: 1px dashed #bdbdbd;
+
+}
+
+.l_drillDown {
+  list-style: none outside none;
+  position: relative;
+  overflow: visible;
+  margin: 0;
+  padding:0;
+}
+
+.l_drillDown ul {
+  display: none;
+  left: 100%;
+  list-style: none outside none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  padding:0;
+}
+
+.l_drillDown li {
+  border-bottom: 1px dotted #CCC;
+  cursor: pointer;
+  display: block;
+  padding: 0
+}
+
+/*.l_drillDown li.hasSubs { background: url(drilldown_arrow.png) no-repeat scroll right center transparent }*/
+
+.l_drillDown li:last-child { border: medium none }
+
+.l_drillDown a {
+  display: block;
+  padding: 9px;
+  outline:none;
+  color:#232323;
+/*  font-family: 'Open Sans Semibold', sans-serif;*/
+}
+.l_drillDown a:hover{
+text-decoration:none;
+color:#232323;
+}
+.l_drillDown a i{
+padding-right:5px;
+font-size: 15px;
+}
+
+.l_ddbc {
+  background: none repeat scroll 0 0 #F3F3F3;
+  border-bottom: 1px dotted #CCC;
+  font-size: 14px;
+  font-weight: 700;
+  display: none;
+  padding: 4px 9px
+}
+
+.l_drillDown ul.active,
+.l_drillDown ul.displayed { display: block }
+.l_drillDown ul li{padding:0 0 0 10px;}
+
+.font_icon{font-family:FontAwesome; font-style:normal; font-weight:normal;}

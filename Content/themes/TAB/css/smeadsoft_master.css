@@ -1,0 +1,248 @@
+﻿body
+{
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom:0px;
+    min-width:1000px;
+    width: 90%;
+    font-family: Arial;
+    font-size: 9pt;
+    font-weight: 500; 
+    height:100%;
+}
+
+html
+{
+    margin:0;
+    padding:0;
+    height:100%;
+    border:none
+}
+
+
+a
+{
+	text-decoration: none;
+	color: #990000;
+}
+
+
+.container
+{
+	padding-left: 20px;
+	padding-right: 20px;
+	overflow: auto;
+	font-size: 9pt;
+	background-image: url(images/gradiant.jpg);
+	background-repeat: repeat-x;
+}
+
+#menucontainer
+{
+	padding-left: 15px;
+	font-weight: 500;
+}
+
+
+
+.toolmenuitem
+{
+	padding-left: 16px;
+	padding-right: 16px;
+	font-size: 11px;
+}
+
+#header
+{
+	margin-top: 4px;
+	border-style: solid solid none solid;
+	border-width: 1px 1px 0px 1px;
+	border-color: #000000;
+}
+
+#expander
+{
+	float: right;
+	width: 20px;
+}
+
+#searchbox
+{
+	float: right; 
+	height: 50px;
+}
+
+#smeadlogo
+{
+    border-style: solid solid none solid;
+    font-size: large;
+    font-weight: bold;
+    color: #FFFFFF;
+    
+    height: 40px;
+    padding-top: 0px;
+    padding-left: 0px; 
+    background-color: #6E0D33;
+    
+    margin: 0px;
+    vertical-align: top;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-top-color: black;
+    border-right-color: black;
+    border-left-color: black;
+}
+
+#workgroupselected
+{
+	border-style: solid solid none solid;
+	border-width: 1px 1px 0px 1px;
+	border-color: #000000;
+}
+
+#tablemenucontainer
+{
+    
+	border: none;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+
+
+h4
+{
+	font-size: 10pt;
+	color: #000000;
+	font-weight: 600;
+	padding-bottom: 4px;
+	margin-bottom: 12px;
+	border-bottom-style: solid;
+	border-bottom-color: #7a1312;
+	text-align: left;
+	border-bottom-width: 1px;
+}
+select
+{
+ 
+}
+h4
+{
+	background-image: url(images/gradiant.jpg);
+}
+
+.searchresult
+{
+    border-bottom: dotted 1px #aaaaaa; 
+}
+
+.searchdesc1
+{
+    font-size: 18pt; 
+}
+
+.searchdesc2
+{
+    font-size: 9pt; 
+    color: #000000;
+}
+
+.searchlocation
+{
+    color: green; 
+    font-style: italic;
+}
+
+.searchtitle
+{
+     color: blue;        
+     font-family: Arial;             
+     font-size: 10pt; 
+}
+
+
+.inputbox
+{
+    border: 1px solid silver;
+    background-color: White;
+    padding: 3px;
+}
+
+.landingButton
+{
+    background-color: #eeeeee;
+    border: solid 1px black;
+    height: 60px;
+    width: 330px;
+    font-size: 14pt; 
+    font-weight: 600; 
+}
+
+.adjustedZIndex {
+    z-index: 50;
+    position:relative;
+}
+
+.adminMenu {
+    padding: 3px;
+    padding-right: 40px;
+    margin-right:0px;
+    margin-left:auto;
+   
+    position:absolute;
+    right:5px;
+}
+
+.marquee
+{
+ position: absolute; 
+ bottom: 0px; 
+ top: 53px;
+ left: 0px; 
+ right: 0px;  
+ background-color: silver;
+}
+
+.marqueepadding
+{
+text-align: left; 
+border: 2px inset silver; 
+background-color: White; 
+padding: 6px; 
+margin: 6px; 
+overflow: auto;
+position: absolute;
+bottom: 0px;
+top: 0px;
+left: 0px;
+right: 0px; 
+}
+
+.marqueetransparent
+{
+width: 100%; 
+position: absolute; 
+bottom: 0px; 
+top: 27px;
+left: 0px; 
+right: 0px;  
+text-align: center;
+background-color: Black; 
+opacity: 0.3;
+filter: alpha(opacity=30);
+z-index: 6;
+}
+
+.marqueedialog
+{
+margin: 0 auto;
+width: auto;
+position: absolute;   
+top: 150px;
+right: 40%;
+background-color: white;
+border: ridge 6px silver; 
+}

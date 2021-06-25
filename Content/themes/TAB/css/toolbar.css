@@ -1,0 +1,7 @@
+﻿.queryButton
+{
+    background-image: url('images/query runner.png');
+    background-repeat: no-repeat;
+    background-position: left center; 
+    padding-left: 20px;
+}

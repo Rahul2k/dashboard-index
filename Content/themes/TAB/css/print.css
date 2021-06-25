@@ -1,0 +1,35 @@
+﻿@media print /*--This is for Print--*/
+{
+    #ContentPlaceHolder1_lblRowCount, #ContentPlaceHolder1_lblReportDate {
+        font-size: 12px;
+        font-family: Arial;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    table, td, th {
+        border: 1px solid #ddd;
+        font-size: 10px;
+        font-family: Arial;
+    }
+}
+
+@media screen /*--This is for Print Preview Screen--*/
+{
+    #ContentPlaceHolder1_lblRowCount, #ContentPlaceHolder1_lblReportDate {
+        font-size: 12px;
+        font-family: Arial;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    table, td, th {
+        border: 1px solid #ddd;
+        font-size: 10px;
+        font-family: Arial;
+    }
+}

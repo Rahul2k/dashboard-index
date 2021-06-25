@@ -1,0 +1,102 @@
+﻿@charset "utf-8";
+@import url("CustomFont.css");
+/* CSS Document */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    z-index: -1;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body{
+	background:url(../img/login-bg.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.checkbox input[type=checkbox] {margin-left:0px !important;}
+.login-cover,.login-cover-bg,.login-cover-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.login-cover-bg {
+    background:#8E979D;
+}
+.dd {
+    background: #666666; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #666666 0%, #000000 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#666666), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #666666 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #666666 0%,#000000 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #666666 0%,#000000 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center, #666666 0%,#000000 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+.bg-width {width:100%;background-size:100% auto;}
+.last-login-text-align{text-align:left;}
+.version-text-align {text-align:right;}
+
+.login_container{padding:0 10%; margin-top:150px;}
+.login-text{color:#FFF; font-family: 'Open Sans', sans-serif; font-style:italic; font-weight:300; font-size:30px; text-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); line-height:48px;}
+.login-form-box{
+	max-width:538px;
+	background:#f2f2f2 !important;
+	-webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.4);
+	box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.4);
+	font-size:14px;
+	color:#141414;
+    float:right;
+}
+.information-box{
+    background:#f2f2f2 !important;
+	-webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.4);
+	box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.4);
+	font-size:14px;
+	color:#141414;
+    float:right;
+}
+.login-form-heading{background:#f2f2f2 !important; font-size:16px !important; font-family: 'Open Sans Semibold', sans-serif; color:#777777 !important; padding:15px 0;}
+.form_field{height:55px;}
+.form_field_icon{font-size:20px; color:#a2a2a2;min-width:43px;}
+.stay-logged-in{font-size:14px;}
+.login-btn{width:100%; background:#002949; border:none; color:#FFF; /*font-family: 'Open Sans Semibold', sans-serif;*/font-family:DPBold; font-size:20px; border-radius:5px; padding:15px 0;}
+.login-footer{color:#FFF; font-size:12px;}
+
+#wrapper {
+    position: static;
+    height: 100%;
+    padding-top: 0px;
+}
+.intro-content,.signin-content {
+    min-height: 260px;
+    max-height: calc(100vh - 515px);
+    overflow: auto;
+}
+@media (min-width: 768px) {
+    #wrapper {
+        padding-left: 0px;
+    }
+}
+@media screen and (max-width: 1366px) {
+    .login_container {
+        margin-top: 50px;
+    }
+}
+.hint-info {
+    color:#11a3dc;
+    font-size:14px;
+    font-style:italic;
+}

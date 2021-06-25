@@ -1,0 +1,1034 @@
+/*.flagstrap {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+}*/
+
+.flagstrap-icon {
+    display: inline-block;
+    width: 16px;
+    height: 11px;
+    background: url(flags.png) no-repeat
+}
+
+.flagstrap-placeholder,
+.flagstrap-placeholder i {
+  display: none
+}
+
+.flagstrap-icon.flagstrap-ad {
+    background-position: -16px 0
+}
+
+.flagstrap-icon.flagstrap-ar-ae {
+    background-position: -32px 0
+}
+
+.flagstrap-icon.flagstrap-af {
+    background-position: -48px 0
+}
+
+.flagstrap-icon.flagstrap-ag {
+    background-position: -64px 0
+}
+
+.flagstrap-icon.flagstrap-ai {
+    background-position: -80px 0
+}
+
+.flagstrap-icon.flagstrap-sq-al {
+    background-position: -96px 0
+}
+
+.flagstrap-icon.flagstrap-hy-am {
+    background-position: -112px 0
+}
+
+.flagstrap-icon.flagstrap-an {
+    background-position: -128px 0
+}
+
+.flagstrap-icon.flagstrap-ao {
+    background-position: -144px 0
+}
+
+.flagstrap-icon.flagstrap-es-ar {
+    background-position: -160px 0
+}
+
+.flagstrap-icon.flagstrap-as {
+    background-position: -176px 0
+}
+
+.flagstrap-icon.flagstrap-de-at {
+    background-position: -192px 0
+}
+
+.flagstrap-icon.flagstrap-en-au {
+    background-position: -208px 0
+}
+
+.flagstrap-icon.flagstrap-aw {
+    background-position: -224px 0
+}
+
+.flagstrap-icon.flagstrap-az {
+    background-position: -240px 0
+}
+
+.flagstrap-icon.flagstrap-ba {
+    background-position: 0 -11px
+}
+
+.flagstrap-icon.flagstrap-bb {
+    background-position: -16px -11px
+}
+
+.flagstrap-icon.flagstrap-bd {
+    background-position: -32px -11px
+}
+
+.flagstrap-icon.flagstrap-nl-be {
+    background-position: -48px -11px
+}
+
+.flagstrap-icon.flagstrap-bf {
+    background-position: -64px -11px
+}
+
+.flagstrap-icon.flagstrap-bg-bg {
+    background-position: -80px -11px
+}
+
+.flagstrap-icon.flagstrap-ar-bh {
+    background-position: -96px -11px
+}
+
+.flagstrap-icon.flagstrap-bi {
+    background-position: -112px -11px
+}
+
+.flagstrap-icon.flagstrap-bj {
+    background-position: -128px -11px
+}
+
+.flagstrap-icon.flagstrap-bm {
+    background-position: -144px -11px
+}
+
+.flagstrap-icon.flagstrap-ms-bn {
+    background-position: -160px -11px
+}
+
+.flagstrap-icon.flagstrap-es-bo {
+    background-position: -176px -11px
+}
+
+.flagstrap-icon.flagstrap-pt-br {
+    background-position: -192px -11px
+}
+
+.flagstrap-icon.flagstrap-bs {
+    background-position: -208px -11px
+}
+
+.flagstrap-icon.flagstrap-bt {
+    background-position: -224px -11px
+}
+
+.flagstrap-icon.flagstrap-bv {
+    background-position: -240px -11px
+}
+
+.flagstrap-icon.flagstrap-bw {
+    background-position: 0 -22px
+}
+
+.flagstrap-icon.flagstrap-be-by {
+    background-position: -16px -22px
+}
+
+.flagstrap-icon.flagstrap-en-bz {
+    background-position: -32px -22px
+}
+
+.flagstrap-icon.flagstrap-en-ca {
+    background-position: -48px -22px
+}
+
+.flagstrap-icon.flagstrap-catalonia {
+    background-position: -64px -22px
+}
+
+.flagstrap-icon.flagstrap-cd {
+    background-position: -80px -22px
+}
+
+.flagstrap-icon.flagstrap-cf {
+    background-position: -96px -22px
+}
+
+.flagstrap-icon.flagstrap-cg {
+    background-position: -112px -22px
+}
+
+.flagstrap-icon.flagstrap-fr-ch, .flagstrap-icon.flagstrap-de-ch {
+    background-position: -128px -22px
+}
+
+.flagstrap-icon.flagstrap-ci {
+    background-position: -144px -22px
+}
+
+.flagstrap-icon.flagstrap-ck {
+    background-position: -160px -22px
+}
+
+.flagstrap-icon.flagstrap-es-cl {
+    background-position: -176px -22px
+}
+
+.flagstrap-icon.flagstrap-cm {
+    background-position: -192px -22px
+}
+
+.flagstrap-icon.flagstrap-zh-cn {
+    background-position: -208px -22px
+}
+
+.flagstrap-icon.flagstrap-es-co {
+    background-position: -224px -22px
+}
+
+.flagstrap-icon.flagstrap-es-cr {
+    background-position: -240px -22px
+}
+
+.flagstrap-icon.flagstrap-cu {
+    background-position: 0 -33px
+}
+
+.flagstrap-icon.flagstrap-cv {
+    background-position: -16px -33px
+}
+
+.flagstrap-icon.flagstrap-cw {
+    background-position: -32px -33px
+}
+
+.flagstrap-icon.flagstrap-cy {
+    background-position: -48px -33px
+}
+
+.flagstrap-icon.flagstrap-cs-cz {
+    background-position: -64px -33px
+}
+
+.flagstrap-icon.flagstrap-de-de {
+    background-position: -80px -33px
+}
+
+.flagstrap-icon.flagstrap-dj {
+    background-position: -96px -33px
+}
+
+.flagstrap-icon.flagstrap-da-dk {
+    background-position: -112px -33px
+}
+
+.flagstrap-icon.flagstrap-dm {
+    background-position: -128px -33px
+}
+
+.flagstrap-icon.flagstrap-es-do {
+    background-position: -144px -33px
+}
+
+.flagstrap-icon.flagstrap-ar-dz {
+    background-position: -160px -33px
+}
+
+.flagstrap-icon.flagstrap-es-ec {
+    background-position: -176px -33px
+}
+
+.flagstrap-icon.flagstrap-et-ee {
+    background-position: -192px -33px
+}
+
+.flagstrap-icon.flagstrap-ar-eg {
+    background-position: -208px -33px
+}
+
+.flagstrap-icon.flagstrap-eh {
+    background-position: -224px -33px
+}
+
+.flagstrap-icon.flagstrap-england {
+    background-position: -240px -33px
+}
+
+.flagstrap-icon.flagstrap-er {
+    background-position: 0 -44px
+}
+
+.flagstrap-icon.flagstrap-es-es{
+    background-position: -16px -44px
+}
+
+.flagstrap-icon.flagstrap-et {
+    background-position: -32px -44px
+}
+
+.flagstrap-icon.flagstrap-eu {
+    background-position: -48px -44px
+}
+
+.flagstrap-icon.flagstrap-fi-fi {
+    background-position: -64px -44px
+}
+
+.flagstrap-icon.flagstrap-fj {
+    background-position: -80px -44px
+}
+
+.flagstrap-icon.flagstrap-fk {
+    background-position: -96px -44px
+}
+
+.flagstrap-icon.flagstrap-fm {
+    background-position: -112px -44px
+}
+
+.flagstrap-icon.flagstrap-fo-fo {
+    background-position: -128px -44px
+}
+
+.flagstrap-icon.flagstrap-fr-ca, .flagstrap-icon.flagstrap-fr-fr {
+    /*background-position: -144px -44px*/
+    background-position: -48px -22px
+}
+
+.flagstrap-icon.flagstrap-ga {
+    background-position: -160px -44px
+}
+
+.flagstrap-icon.flagstrap-en-gb {
+    background-position: -176px -44px
+}
+
+.flagstrap-icon.flagstrap-gd {
+    background-position: -192px -44px
+}
+
+.flagstrap-icon.flagstrap-ka-ge {
+    background-position: -208px -44px
+}
+
+.flagstrap-icon.flagstrap-gf {
+    background-position: -224px -44px
+}
+
+.flagstrap-icon.flagstrap-gg {
+    background-position: -240px -44px
+}
+
+.flagstrap-icon.flagstrap-gh {
+    background-position: 0 -55px
+}
+
+.flagstrap-icon.flagstrap-gi {
+    background-position: -16px -55px
+}
+
+.flagstrap-icon.flagstrap-gl {
+    background-position: -32px -55px
+}
+
+.flagstrap-icon.flagstrap-gm {
+    background-position: -48px -55px
+}
+
+.flagstrap-icon.flagstrap-gn {
+    background-position: -64px -55px
+}
+
+.flagstrap-icon.flagstrap-gp {
+    background-position: -80px -55px
+}
+
+.flagstrap-icon.flagstrap-gq {
+    background-position: -96px -55px
+}
+
+.flagstrap-icon.flagstrap-el-gr {
+    background-position: -112px -55px
+}
+
+.flagstrap-icon.flagstrap-gs {
+    background-position: -128px -55px
+}
+
+.flagstrap-icon.flagstrap-es-gt {
+    background-position: -144px -55px
+}
+
+.flagstrap-icon.flagstrap-gu {
+    background-position: -160px -55px
+}
+
+.flagstrap-icon.flagstrap-gw {
+    background-position: -176px -55px
+}
+
+.flagstrap-icon.flagstrap-gy {
+    background-position: -192px -55px
+}
+
+.flagstrap-icon.flagstrap-zh-hk {
+    background-position: -208px -55px
+}
+
+.flagstrap-icon.flagstrap-hm {
+    background-position: -224px -55px
+}
+
+.flagstrap-icon.flagstrap-es-hn {
+    background-position: -240px -55px
+}
+
+.flagstrap-icon.flagstrap-hr-hr {
+    background-position: 0 -66px
+}
+
+.flagstrap-icon.flagstrap-ht {
+    background-position: -16px -66px
+}
+
+.flagstrap-icon.flagstrap-hu-hu {
+    background-position: -32px -66px
+}
+
+.flagstrap-icon.flagstrap-ic {
+    background-position: -48px -66px
+}
+
+.flagstrap-icon.flagstrap-id-id {
+    background-position: -64px -66px
+}
+
+.flagstrap-icon.flagstrap-en-ie {
+    background-position: -80px -66px
+}
+
+.flagstrap-icon.flagstrap-he-il {
+    background-position: -96px -66px
+}
+
+.flagstrap-icon.flagstrap-im {
+    background-position: -112px -66px
+}
+
+.flagstrap-icon.flagstrap-gu-in,
+.flagstrap-icon.flagstrap-hi-in,
+.flagstrap-icon.flagstrap-kn-in,
+.flagstrap-icon.flagstrap-kok-in ,
+.flagstrap-icon.flagstrap-mr-in,
+.flagstrap-icon.flagstrap-pa-in,
+.flagstrap-icon.flagstrap-sa-in,
+.flagstrap-icon.flagstrap-ta-in,
+.flagstrap-icon.flagstrap-te-in
+{
+    background-position: -128px -66px
+}
+
+.flagstrap-icon.flagstrap-io {
+    background-position: -144px -66px
+}
+
+.flagstrap-icon.flagstrap-ar-iq {
+    background-position: -160px -66px
+}
+
+.flagstrap-icon.flagstrap-fa-ir {
+    background-position: -176px -66px
+}
+
+.flagstrap-icon.flagstrap-is-is {
+    background-position: -192px -66px
+}
+
+.flagstrap-icon.flagstrap-it-it {
+    background-position: -208px -66px
+}
+
+.flagstrap-icon.flagstrap-je {
+    background-position: -224px -66px
+}
+
+.flagstrap-icon.flagstrap-en-jm {
+    background-position: -240px -66px
+}
+
+.flagstrap-icon.flagstrap-ar-jo {
+    background-position: 0 -77px
+}
+
+.flagstrap-icon.flagstrap-ja-jp {
+    background-position: -16px -77px
+}
+
+.flagstrap-icon.flagstrap-sw-ke {
+    background-position: -32px -77px
+}
+
+.flagstrap-icon.flagstrap-kg {
+    background-position: -48px -77px
+}
+
+.flagstrap-icon.flagstrap-kh {
+    background-position: -64px -77px
+}
+
+.flagstrap-icon.flagstrap-ki {
+    background-position: -80px -77px
+}
+
+.flagstrap-icon.flagstrap-km {
+    background-position: -96px -77px
+}
+
+.flagstrap-icon.flagstrap-kn {
+    background-position: -112px -77px
+}
+
+.flagstrap-icon.flagstrap-ko-kp {
+    background-position: -128px -77px
+}
+
+.flagstrap-icon.flagstrap-ko-kr {
+    background-position: -144px -77px
+}
+
+.flagstrap-icon.flagstrap-kurdistan {
+    background-position: -160px -77px
+}
+
+.flagstrap-icon.flagstrap-ar-kw {
+    background-position: -176px -77px
+}
+
+.flagstrap-icon.flagstrap-ky {
+    background-position: -192px -77px
+}
+
+.flagstrap-icon.flagstrap-kk-kz,.flagstrap-icon.flagstrap-ky-kz {
+    background-position: -208px -77px
+}
+
+.flagstrap-icon.flagstrap-la {
+    background-position: -224px -77px
+}
+
+.flagstrap-icon.flagstrap-ar-lb {
+    background-position: -240px -77px
+}
+
+.flagstrap-icon.flagstrap-lc {
+    background-position: 0 -88px
+}
+
+.flagstrap-icon.flagstrap-de-li {
+    background-position: -16px -88px
+}
+
+.flagstrap-icon.flagstrap-lk {
+    background-position: -32px -88px
+}
+
+.flagstrap-icon.flagstrap-lr {
+    background-position: -48px -88px
+}
+
+.flagstrap-icon.flagstrap-ls {
+    background-position: -64px -88px
+}
+
+.flagstrap-icon.flagstrap-lt-lt {
+    background-position: -80px -88px
+}
+
+.flagstrap-icon.flagstrap-lu {
+    background-position: -96px -88px
+}
+
+.flagstrap-icon.flagstrap-lv-lv {
+    background-position: -112px -88px
+}
+
+.flagstrap-icon.flagstrap-ar-ly {
+    background-position: -128px -88px
+}
+
+.flagstrap-icon.flagstrap-ar-ma {
+    background-position: -144px -88px
+}
+
+.flagstrap-icon.flagstrap-fr-mc {
+    background-position: -160px -88px
+}
+
+.flagstrap-icon.flagstrap-md {
+    background-position: -176px -88px
+}
+
+.flagstrap-icon.flagstrap-me {
+    background-position: -192px -88px
+}
+
+.flagstrap-icon.flagstrap-mg {
+    background-position: -208px -88px
+}
+
+.flagstrap-icon.flagstrap-mh {
+    background-position: -224px -88px
+}
+
+.flagstrap-icon.flagstrap-mk-mk {
+    background-position: -240px -88px
+}
+
+.flagstrap-icon.flagstrap-ml {
+    background-position: 0 -99px
+}
+
+.flagstrap-icon.flagstrap-mm {
+    background-position: -16px -99px
+}
+
+.flagstrap-icon.flagstrap-mn-mn {
+    background-position: -32px -99px
+}
+
+.flagstrap-icon.flagstrap-mo {
+    background-position: -48px -99px
+}
+
+.flagstrap-icon.flagstrap-mp {
+    background-position: -64px -99px
+}
+
+.flagstrap-icon.flagstrap-mq {
+    background-position: -80px -99px
+}
+
+.flagstrap-icon.flagstrap-mr {
+    background-position: -96px -99px
+}
+
+.flagstrap-icon.flagstrap-ms {
+    background-position: -112px -99px
+}
+
+.flagstrap-icon.flagstrap-mt {
+    background-position: -128px -99px
+}
+
+.flagstrap-icon.flagstrap-mu {
+    background-position: -144px -99px
+}
+
+.flagstrap-icon.flagstrap-div-mv {
+    background-position: -160px -99px
+}
+
+.flagstrap-icon.flagstrap-mw {
+    background-position: -176px -99px
+}
+
+.flagstrap-icon.flagstrap-es-mx {
+    background-position: -192px -99px
+}
+
+.flagstrap-icon.flagstrap-ms-my {
+    background-position: -208px -99px
+}
+
+.flagstrap-icon.flagstrap-mz {
+    background-position: -224px -99px
+}
+
+.flagstrap-icon.flagstrap-na {
+    background-position: -240px -99px
+}
+
+.flagstrap-icon.flagstrap-nc {
+    background-position: 0 -110px
+}
+
+.flagstrap-icon.flagstrap-ne {
+    background-position: -16px -110px
+}
+
+.flagstrap-icon.flagstrap-nf {
+    background-position: -32px -110px
+}
+
+.flagstrap-icon.flagstrap-ng {
+    background-position: -48px -110px
+}
+
+.flagstrap-icon.flagstrap-es-ni {
+    background-position: -64px -110px
+}
+
+.flagstrap-icon.flagstrap-nl-nl {
+    background-position: -80px -110px
+}
+
+.flagstrap-icon.flagstrap-nb-no, .flagstrap-icon.flagstrap-nn-no {
+    background-position: -96px -110px
+}
+
+.flagstrap-icon.flagstrap-np {
+    background-position: -112px -110px
+}
+
+.flagstrap-icon.flagstrap-nr {
+    background-position: -128px -110px
+}
+
+.flagstrap-icon.flagstrap-nu {
+    background-position: -144px -110px
+}
+
+.flagstrap-icon.flagstrap-en-nz{
+    background-position: -160px -110px
+}
+
+.flagstrap-icon.flagstrap-ar-om {
+    background-position: -176px -110px
+}
+
+.flagstrap-icon.flagstrap-es-pa {
+    background-position: -192px -110px
+}
+
+.flagstrap-icon.flagstrap-es-pe {
+    background-position: -208px -110px
+}
+
+.flagstrap-icon.flagstrap-pf {
+    background-position: -224px -110px
+}
+
+.flagstrap-icon.flagstrap-pg {
+    background-position: -240px -110px
+}
+
+.flagstrap-icon.flagstrap-en-ph {
+    background-position: 0 -121px
+}
+
+.flagstrap-icon.flagstrap-ur-pk {
+    background-position: -16px -121px
+}
+
+.flagstrap-icon.flagstrap-pl-pl {
+    background-position: -32px -121px
+}
+
+.flagstrap-icon.flagstrap-pm {
+    background-position: -48px -121px
+}
+
+.flagstrap-icon.flagstrap-pn {
+    background-position: -64px -121px
+}
+
+.flagstrap-icon.flagstrap-es-pr {
+    background-position: -80px -121px
+}
+
+.flagstrap-icon.flagstrap-ps {
+    background-position: -96px -121px
+}
+
+.flagstrap-icon.flagstrap-pt-pt {
+    background-position: -112px -121px
+}
+
+.flagstrap-icon.flagstrap-pw {
+    background-position: -128px -121px
+}
+
+.flagstrap-icon.flagstrap-es-py {
+    background-position: -144px -121px
+}
+
+.flagstrap-icon.flagstrap-ar-qa {
+    background-position: -160px -121px
+}
+
+.flagstrap-icon.flagstrap-re {
+    background-position: -176px -121px
+}
+
+.flagstrap-icon.flagstrap-ro-ro {
+    background-position: -192px -121px
+}
+
+.flagstrap-icon.flagstrap-rs {
+    background-position: -208px -121px
+}
+
+.flagstrap-icon.flagstrap-ru-ru {
+    background-position: -224px -121px
+}
+
+.flagstrap-icon.flagstrap-rw {
+    background-position: -240px -121px
+}
+
+.flagstrap-icon.flagstrap-ar-sa {
+    background-position: 0 -132px
+}
+
+.flagstrap-icon.flagstrap-sb {
+    background-position: -16px -132px
+}
+
+.flagstrap-icon.flagstrap-sc {
+    background-position: -32px -132px
+}
+
+.flagstrap-icon.flagstrap-scotland {
+    background-position: -48px -132px
+}
+
+.flagstrap-icon.flagstrap-sd {
+    background-position: -64px -132px
+}
+
+.flagstrap-icon.flagstrap-sv-se {
+    background-position: -80px -132px
+}
+
+.flagstrap-icon.flagstrap-zh-sg {
+    background-position: -96px -132px
+}
+
+.flagstrap-icon.flagstrap-sh {
+    background-position: -112px -132px
+}
+
+.flagstrap-icon.flagstrap-sl-si {
+    background-position: -128px -132px
+}
+
+.flagstrap-icon.flagstrap-sk-sk {
+    background-position: -144px -132px
+}
+
+.flagstrap-icon.flagstrap-sl {
+    background-position: -160px -132px
+}
+
+.flagstrap-icon.flagstrap-sm {
+    background-position: -176px -132px
+}
+
+.flagstrap-icon.flagstrap-sn {
+    background-position: -192px -132px
+}
+
+.flagstrap-icon.flagstrap-so {
+    background-position: -208px -132px
+}
+
+.flagstrap-icon.flagstrap-somaliland {
+    background-position: -224px -132px
+}
+
+.flagstrap-icon.flagstrap-sr {
+    background-position: -240px -132px
+}
+
+.flagstrap-icon.flagstrap-ss {
+    background-position: 0 -143px
+}
+
+.flagstrap-icon.flagstrap-st {
+    background-position: -16px -143px
+}
+
+.flagstrap-icon.flagstrap-es-sv {
+    background-position: -32px -143px
+}
+
+.flagstrap-icon.flagstrap-sx {
+    background-position: -48px -143px
+}
+
+.flagstrap-icon.flagstrap-sy {
+    background-position: -64px -143px
+}
+
+.flagstrap-icon.flagstrap-sz {
+    background-position: -80px -143px
+}
+
+.flagstrap-icon.flagstrap-tc {
+    background-position: -96px -143px
+}
+
+.flagstrap-icon.flagstrap-td {
+    background-position: -112px -143px
+}
+
+.flagstrap-icon.flagstrap-tf {
+    background-position: -128px -143px
+}
+
+.flagstrap-icon.flagstrap-tg {
+    background-position: -144px -143px
+}
+
+.flagstrap-icon.flagstrap-th-th {
+    background-position: -160px -143px
+}
+
+.flagstrap-icon.flagstrap-tj {
+    background-position: -176px -143px
+}
+
+.flagstrap-icon.flagstrap-tk {
+    background-position: -192px -143px
+}
+
+.flagstrap-icon.flagstrap-tl {
+    background-position: -208px -143px
+}
+
+.flagstrap-icon.flagstrap-tm {
+    background-position: -224px -143px
+}
+
+.flagstrap-icon.flagstrap-ar-tn {
+    background-position: -240px -143px
+}
+
+.flagstrap-icon.flagstrap-to {
+    background-position: 0 -154px
+}
+
+.flagstrap-icon.flagstrap-tr-tr {
+    background-position: -16px -154px
+}
+
+.flagstrap-icon.flagstrap-en-tt {
+    background-position: -32px -154px
+}
+
+.flagstrap-icon.flagstrap-tv {
+    background-position: -48px -154px
+}
+
+.flagstrap-icon.flagstrap-zh-tw {
+    background-position: -64px -154px
+}
+
+.flagstrap-icon.flagstrap-tz {
+    background-position: -80px -154px
+}
+
+.flagstrap-icon.flagstrap-uk-ua {
+    background-position: -96px -154px
+}
+
+.flagstrap-icon.flagstrap-ug {
+    background-position: -112px -154px
+}
+
+.flagstrap-icon.flagstrap-um {
+    background-position: -128px -154px
+}
+
+.flagstrap-icon.flagstrap-en-us {
+    background-position: -144px -154px
+}
+
+.flagstrap-icon.flagstrap-es-uy {
+    background-position: -160px -154px
+}
+
+.flagstrap-icon.flagstrap-uz {
+    background-position: -176px -154px
+}
+
+.flagstrap-icon.flagstrap-va {
+    background-position: -192px -154px
+}
+
+.flagstrap-icon.flagstrap-vc {
+    background-position: -208px -154px
+}
+
+.flagstrap-icon.flagstrap-es-ve {
+    background-position: -224px -154px
+}
+
+.flagstrap-icon.flagstrap-vg {
+    background-position: -240px -154px
+}
+
+.flagstrap-icon.flagstrap-vi {
+    background-position: 0 -165px
+}
+
+.flagstrap-icon.flagstrap-vn {
+    background-position: -16px -165px
+}
+
+.flagstrap-icon.flagstrap-vu {
+    background-position: -32px -165px
+}
+
+.flagstrap-icon.flagstrap-wales {
+    background-position: -48px -165px
+}
+
+.flagstrap-icon.flagstrap-wf {
+    background-position: -64px -165px
+}
+
+.flagstrap-icon.flagstrap-ws {
+    background-position: -80px -165px
+}
+
+.flagstrap-icon.flagstrap-ar-ye {
+    background-position: -96px -165px
+}
+
+.flagstrap-icon.flagstrap-yt {
+    background-position: -112px -165px
+}
+
+.flagstrap-icon.flagstrap-af-za {
+    background-position: -128px -165px
+}
+
+.flagstrap-icon.flagstrap-zanzibar {
+    background-position: -144px -165px
+}
+
+.flagstrap-icon.flagstrap-zm {
+    background-position: -160px -165px
+}
+
+.flagstrap-icon.flagstrap-en-zw {
+    background-position: -176px -165px
+}
+#userLangSelect .btn-default {width:206px; padding:10px 10px !important;white-space:nowrap !important;}
+#userLangSelect .btn-default div:first-child { width: 172px; text-align: left; display: inline-block;}
+#userLangSelect .btn-default div:last-child { text-align: right; width: 10px;}

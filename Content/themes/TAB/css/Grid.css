@@ -1,0 +1,39 @@
+﻿
+.gridcolheader
+{
+    padding-left: 8px;
+    cursor: pointer;
+    padding-right: 8px;
+    border-right: groove 2px silver;
+    background-color: #f8f8f8;
+    border-bottom: outset 2px silver;
+}
+
+.gridrowheader
+{
+    padding-left: 8px;
+    padding-right: 8px;
+    cursor: pointer;
+    border-bottom: groove 2px silver;
+    background-color: #f8f8f8;
+    border-right: groove 2px silver;
+    text-align: center; 
+}
+
+.gridcell
+{
+    border: solid 1px #dddddd; 
+    cursor: pointer;
+    font-size: 9pt;
+    padding-left: 2px;
+    padding-right: 8px;
+}
+
+.gridaction
+{
+    background-color: #7D0042;
+    color: White;
+    font-size: 9pt;
+    padding-left: 0px;
+    padding-right: 0px;
+}
