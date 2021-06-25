@@ -79,12 +79,6 @@ hr {
     margin: 15px 0;
 }
 
-.widget {
-    overflow: auto;
-
-    border: 1px solid grey;
-}
-
 .dashbar {
     display: flex;
     height: 45px;
@@ -132,6 +126,8 @@ hr {
     margin: 10px;
     padding: 5px;
     background: #ffffff;
+    overflow: auto;
+    border: 1px solid grey;
 }
 
 /*    .sortable div {
@@ -158,10 +154,9 @@ h1 {
     font-size: 20px;
     height: 260px;
     width: 550px;
-    position: absolute;
-    top: 58%;
+    position: relative;
+    top: 100%;
     left: 50%;
-    margin: 0;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
