@@ -2,19 +2,12 @@
 
 $(document).ready(function () {
 
+
     $(function () {
-       //Make list sortable:
-       $(".sortable").sortable({}).disableSelection();
+        //Make list sortable:
+        //$(".sortable").sortable({}).disableSelection();
+        $(".sortable").sortable({})
     });
-
-//    $(function () {
- //       $(".widget").resizable();
-  //  });
-
-    /*
-    $(function () {
-        $('.widget').resizable({});
-    });*/
 });
 
 /*This Event are using for create new Dashboard*/

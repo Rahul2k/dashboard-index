@@ -4,16 +4,20 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'DP';
-    font-size: 14px;
+    font-family: 'DP' !important;
+    font-size: 14px !important;
     height: 100%;
-    word-wrap: break-word;
+    word-wrap: break-word !important;
 }
 
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .content-wrapper {
@@ -41,6 +45,70 @@ body {
     z-index: 99999;
 }
 
+#modal13 {
+    z-index: 99999;
+}
+
+#modal14 {
+    z-index: 99999;
+}
+
+#modalOperation {
+    z-index: 99999;
+}
+
+#modalTracked {
+    z-index: 99999;
+}
+
+#modalSeries {
+    z-index: 99999;
+}
+
+    #modalSeries .modal-body .row {
+        height: 44px;
+    }
+
+#modalTracked .modal-body .row {
+    height: 44px;
+}
+
+#modalOperation .modal-body .row {
+    height: 44px;
+}
+
+#modal13 .modal-body .row {
+    height: 44px;
+}
+
+#modal14 .modal-body .row {
+    height: 44px;
+}
+
+.widget-content {
+    height: 77%;
+    background: #fafafa;
+    overflow: auto;
+}
+
+.options {
+    margin-top: -0.5%;
+    float: right;
+    right: 10px;
+    width: 60px;
+}
+
+.nav-bar {
+    padding-top: 1vh;
+    padding-bottom: 0%;
+}
+
+.widget-name {
+    padding-top: 0.5vh;
+    padding-bottom: 0%;
+    position: relative;
+}
+
 .p-del-dash {
     word-wrap: break-word
 }
@@ -50,12 +118,7 @@ body {
     padding: 8px;
     line-height: 1.42857143;
     vertical-align: top;
-    border-top: 1px solid #ddd;
-}
-
-a, a:hover, a:focus, a:active {
-    text-decoration: none;
-    color: inherit;
+    border-top: 1px solid #666666;
 }
 
 :root {
@@ -68,11 +131,6 @@ a, a:hover, a:focus, a:active {
     overflow-y: hidden;
 }
 
-ul {
-    padding: 0;
-    text-align: left;
-    list-style: none;
-}
 
 hr {
     border-bottom: 0;
@@ -80,14 +138,12 @@ hr {
 }
 
 .dashbar {
-    display: flex;
     height: 45px;
     width: 100%;
-    background-color: #D8D8D8;
     position: fixed;
     z-index: 9999;
-    margin-left: -0.45%;
-    margin-top: -2.6%;
+    margin-left: 0px;
+    margin-top: -36px;
 }
 
 .sortable div .navBar {
@@ -107,40 +163,50 @@ hr {
     border-top-left-radius: 1px;
 }
 
+.widget-icons {
+
+    margin-top: -0.5%;
+    float: right;
+    right: 10px;
+    height: 33px;
+    width: 10%;
+}
+
 .sortable {
     width: 100%;
-    max-width: 1200px;
-    margin: 20px auto;
-    margin-top: 50px;
-    padding: 5px 10px;
+    height: 74vh;
+    margin-top: 20px;
     list-style-type: none;
     text-align: left;
-    overflow-y: hidden;
+    overflow-y: scroll;
+    border: 1px solid #666666;
     transition: ease .2s;
+}
+
+td {
+    padding: 5px;
+    margin: 0px;
+    border: 1px solid gray;
 }
 
 .widget {
     display: inline-block;
-    position: relative;
-    width: 550px;
-    margin: 10px;
-    padding: 5px;
-    background: #ffffff;
-    overflow: auto;
-    border: 1px solid grey;
+    max-width: 98%;
+    min-width: 48%;
+    width:48%;
+    margin: 1%;
 }
 
-/*    .sortable div {
-        display: inline-block;
-        position: relative;
-        width: 550px;
-        margin: 10px;
-        padding: 5px;
-        background: #ffffff;
-    }*/
+.ui-icon {
+    display: none !important;
+}
 
-
-
+.ui-resizable-s {
+    cursor: s-resize;
+    width: 100%;
+    bottom: 1px;
+    left: 0;
+}
 
 h1 {
     margin: 20px auto;
@@ -150,10 +216,10 @@ h1 {
     text-align: center;
 }
 
-.sortable div .content {
+.content {
     font-size: 20px;
     height: 260px;
-    width: 550px;
+    width: 100%;
     position: relative;
     top: 100%;
     left: 50%;
@@ -162,11 +228,6 @@ h1 {
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     color: white;
-    border-bottom: 2px solid #292929;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    border-left: 2px solid #292929;
-    border-right: 2px solid #292929;
 }
 
 
@@ -185,36 +246,26 @@ h1 {
     color: #78909C;
 }
 
-    .sortable div h2:hover {
-        background: #F5F5F5;
-    }
 
-.sortable div .content #data-grid {
-    font-size: 20px;
-    height: 260px;
-    width: 550px;
-    position: absolute;
-    padding: 30px;
-    padding-left: 20px;
-    top: 50%;
-    left: 50%;
-    margin: 0;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    color: #78909C;
-    overflow-y: scroll;
+#data-grid {
+    min-height: 400px;
+    min-width: 400px;
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.new-dash {
-    height: 30px;
-    margin: 6px;
-    margin-left: 15px;
-    border-color: #22415C;
-    color: #292929;
-    border-radius: 7px;
+#new-widget {
+    height: 34px;
+    margin-left: 5px;
 }
+
+
+#new-dash{
+    height: 34px;
+    margin-left: 20px;
+}
+
 
 .dashboards {
     border-radius: 3px;
@@ -303,26 +354,25 @@ h1 {
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
     pointer-events: none;
-    
 }
 
-.modalDialog:target {
-    opacity: 1;
-    pointer-events: auto;
-}
+    .modalDialog:target {
+        opacity: 1;
+        pointer-events: auto;
+    }
 
-.modalDialog > div {
-    width: 500px;
-    position: relative;
-    margin: 10% auto;
-    padding: 5px 20px 13px 20px;
-    border-radius: 10px;
-    background: #fff;
-    background: #fff;
-}
+    .modalDialog > div {
+        width: 500px;
+        position: relative;
+        margin: 10% auto;
+        padding: 5px 20px 13px 20px;
+        border-radius: 10px;
+        background: #fff;
+        background: #fff;
+    }
 
 
-    
+
 
 
 .modalDialog1 {
@@ -357,7 +407,6 @@ h1 {
     }
 
 .close {
-
     padding: 5px;
     color: #000;
     line-height: 25px;
@@ -369,7 +418,7 @@ h1 {
     width: 24px;
     text-decoration: none;
 }
-   
+
 
 .pd {
     padding: 20px;
@@ -389,6 +438,7 @@ h1 {
 .m-t1 {
     margin-top: 50px;
 }
+
 .m-t10 {
     margin-top: 10px;
 }
@@ -401,6 +451,7 @@ h1 {
 {
     margin-right: 27px;
 }
+
 
 .icons:hover {
     filter: grayscale(100%) sepia(100%) brightness(100);
@@ -419,12 +470,13 @@ h1 {
     border-top-left-radius: 3px;
 }
 
-.sortable div .navBar .all-icons {
+.all-icons {
     padding-left: 34px;
     width: 108px;
     height: 46px;
-    top: -81px;
+    top: -10%;
     right: -427px;
+    display: inline-block;
     background-color: #D8D8D8;
     border-top: 2px solid #292929;
     border-right: 2px solid #292929;
@@ -450,7 +502,6 @@ h1 {
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
     pointer-events: none;
-    
 }
 
     .modalDialog2:target {
@@ -470,31 +521,47 @@ h1 {
     }
 
 .img1 {
-    right:32%; position:relative; width:120px;
+    right: 32%;
+    position: relative;
+    width: 120px;
 }
 
 .img2 {
-    right: 21%; position: relative; width: 120px;
+    right: 21%;
+    position: relative;
+    width: 120px;
 }
 
 .img3 {
-   right: 17%; position: relative; width: 120px;
+    right: 17%;
+    position: relative;
+    width: 120px;
 }
+
 .img4 {
-    right: 26%; position: relative; width: 120px;
+    right: 26%;
+    position: relative;
+    width: 120px;
 }
 
 .img11 {
-   left:31%; position:relative; width:30px;
+    left: 31%;
+    position: relative;
+    width: 30px;
 }
+
 .img22 {
-   left:20%; position:relative; width:30px;
+    left: 20%;
+    position: relative;
+    width: 30px;
 }
+
 .img33 {
     left: 16%;
     position: relative;
     width: 30px;
 }
+
 .img44 {
     left: 25%;
     position: relative;
@@ -502,5 +569,6 @@ h1 {
 }
 
 .wibold {
-    font-size:15px; font-weight:bold;
+    font-size: 15px;
+    font-weight: bold;
 }

@@ -12,10 +12,10 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic,300" rel="stylesheet" type="text/css">
 
+
     @Styles.Render("~/Styles/Dashboard")
     @Scripts.Render("~/bundles/Dashboard")
     @Scripts.Render("~/bundles/modernizr")
-
 
     @Styles.Render("~/Styles/MVCLayoutCSS")
     <script src="~/Content/themes/TAB/js/es6-promise.auto.min.js"></script>
@@ -162,20 +162,20 @@
                     <ul class="MyQuery_Fav l_drillDown">
                         <li class="hasSubs" data-toggle="modal" data-target="#modalDeleteDashboard">
                             <a>
-                                My Favorites
+                                Dashboard One
                                 <i class="font_icon theme_color fa fa-trash"></i>
                             </a>
                         </li>
                         <li class="hasSubs" data-toggle="modal" data-target="#modalDeleteDashboard">
                             <a>
-                                My Favorites
+                                Dashboard Two
                                 <i class="font_icon theme_color fa fa-trash"></i>
                             </a>
                         </li>
 
                         <li class="hasSubs" data-toggle="modal" data-target="#modalDeleteDashboard">
                             <a>
-                                My Favorites
+                                Dashboard Three
                                 <i class="font_icon theme_color fa fa-trash"></i>
                             </a>
                         </li>
